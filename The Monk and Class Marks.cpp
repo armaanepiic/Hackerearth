@@ -62,13 +62,19 @@ int main()
         m[marks].insert(name);
     }
     //map < int , set<string> > :: reverse_iterator it;
-    for(auto it = m.rbegin() ; it != m.rend() ; ++it)
+    for(auto it : m)
     {
-        auto &students = it->ss;
-        int marks = it->ff;
+        auto &students = it.ss;
         for(auto value : students)
-            cout << value << " " << marks << endl;
+            cout << value << " " << -1*it.ff << endl;
     }
+//     for(auto it = m.rbegin() ; it != m.rend() ; ++it)
+//     {
+//         auto &students = it->ss;
+//         int marks = it->ff;
+//         for(auto value : students)
+//             cout << value << " " << marks << endl;
+//     }
   
   
   
